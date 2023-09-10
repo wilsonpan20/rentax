@@ -1,20 +1,16 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
-import { CreateCategoryUseCase } from "../createCategory/CreateCategoryUseCase";
-import { CreateSpecificationUseCase } from "./CreateSpecificationUsecase";
+import { CreateCategoryUseCase } from '../createCategory/CreateCategoryUseCase';
+import { CreateSpecificationUseCase } from './CreateSpecificationUsecase';
 
-
-
-class CreateSpecificationController{
-  constructor(private createSpecificationUseCase:CreateSpecificationUseCase){}
+class CreateSpecificationController {
+  constructor(private createSpecificationUseCase: CreateSpecificationUseCase) {}
   handle(request: Request, response: Response) {
-     const { name, description } = request.body
-  this.createSpecificationUseCase.execute({ name, description })
+    const { name, description } = request.body;
+    this.createSpecificationUseCase.execute({ name, description });
 
-  return response.status(201).send()
-
+    return response.status(201).send();
   }
-
 }
 
-export {CreateSpecificationController}
+export { CreateSpecificationController };
