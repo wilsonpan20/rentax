@@ -4,6 +4,7 @@ import { router } from './routes';
 
 import swaggerFile from './swagger.json';
 import { AppDataSource } from './database';
+import './shared/container'
 
 const initializeDatasources = async () => {
   await AppDataSource.initialize();
