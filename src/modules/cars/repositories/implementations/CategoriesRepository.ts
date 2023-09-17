@@ -1,7 +1,7 @@
-import { Category } from '../../entities/Category.entity';
 import { ICategoriesRepository, ICreateCategoryDTO } from '../ICategoriesRepository';
 import { AppDataSource } from '../../../../database';
 import { Repository} from 'typeorm';
+import { Category } from '../../entities/Category.entity';
 
 class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>

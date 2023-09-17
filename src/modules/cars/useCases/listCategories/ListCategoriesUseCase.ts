@@ -1,4 +1,4 @@
-import { Category } from "../../entities/Category.entity";
+import { Category } from "../../entities/Category.entity.ts";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 import { inject,injectable } from 'tsyringe';
 
