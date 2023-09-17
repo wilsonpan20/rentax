@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import 'reflect-metadata';
-import { CreateUserController } from '../modules/accounts/useCases/CreateUserController';
+import { CreateUserController } from '../modules/accounts/useCases/createUser/CreateUserController';
 
 const userRoutes = Router();
 
