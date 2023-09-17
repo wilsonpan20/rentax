@@ -8,6 +8,7 @@ interface IRequet {
 interface IUsersRepository {
   create(data: ICreateUserDTO): Promise<void>;
   findByEmail(email: string): Promise<User | undefined | null>;
+  findById(id: string): Promise<User | undefined | null>;
 }
 
 export { IUsersRepository };
