@@ -1,12 +1,11 @@
-import { Router } from "express";
-import "reflect-metadata";
-import { CreateUserController } from "../modules/accounts/useCases/CreateUserController";
+import { Router } from 'express';
+import 'reflect-metadata';
+import { CreateUserController } from '../modules/accounts/useCases/CreateUserController';
 
+const userRoutes = Router();
 
-const userRoutes = Router()
+const createUserController = new CreateUserController();
 
-const createUserController = new CreateUserController
+userRoutes.post('/', createUserController.handle);
 
-userRoutes.post('/',createUserController.handle)
-
-export {userRoutes}
+export { userRoutes };
